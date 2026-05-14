@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NOXFLIX</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       NAVBAR
+  ═══════════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-left">
+      <a href="#" class="logo">NOX<span>FLIX</span></a>
+      <ul class="nav-links">
+        <li><a href="#" class="active">Início</a></li>
+        <li><a href="#">Filmes</a></li>
+        <li><a href="#">Séries</a></li>
+        <li><a href="#">Animes</a></li>
+        <li><a href="#">Minha Lista</a></li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <div class="search-bar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" placeholder="Buscar títulos, pessoas..." id="searchInput" />
+      </div>
+      <div class="nav-icons">
+        <button class="icon-btn" title="Notificações">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        </button>
+        <div class="avatar" id="avatarBtn">
+          <img src="https://api.dicebear.com/7.x/notionists/svg?seed=nox&backgroundColor=1D1D1D" alt="Avatar" />
+          <span class="avatar-name">Perfil</span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════
+       HERO BANNER
+  ═══════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-slides" id="heroSlides">
+
+      <div class="hero-slide active" data-bg="img/comoMagica.png" data-trailer="https://www.youtube.com/embed/Re5JWFTw9Xk?autoplay=1&rel=0">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <div class="hero-tag">🎬 EM DESTAQUE</div>
+          <h1 class="hero-title">COMO MÁGICA</h1>
+          <div class="hero-meta">
+            <span>2025</span>
+            <span class="dot">•</span>
+            <span>2h 11min</span>
+            <span class="dot">•</span>
+            <span class="rating">★ 8.7</span>
+            <span class="dot">•</span>
+            <span class="badge">Livre</span>
+          </div>
+          <p class="hero-desc">
+            Em um reino escondido entre dimensões, uma jovem descobre possuir poderes capazes de alterar a própria realidade.
+          </p>
+          <div class="hero-btns">
+            <a href="https://www.netflix.com/br/title/81749852" class="btn-play" target="_blank">
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+              Assistir
+            </a>
+            <a href="https://www.youtube.com/embed/Re5JWFTw9Xk?si=jHHhera0Dt3Qcve5" class="btn-trailer" target="_blank">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5,3 19,12 5,21"/></svg>
+              Trailer
+            </a>
+            <button class="btn-info" onclick="openDetailsModal(0)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              Mais Informações
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-slide" data-bg="img/vingadoresUltimato.png" data-trailer="https://www.youtube.com/embed/PgrmbRID0eY?autoplay=1&rel=0">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <div class="hero-tag">🔥 O MAIOR EVENTO DO CINEMA</div>
+          <h1 class="hero-title">VINGADORES: ULTIMATO</h1>
+          <div class="hero-meta">
+            <span>2019</span>
+            <span class="dot">•</span>
+            <span>3h 01min</span>
+            <span class="dot">•</span>
+            <span class="rating">★ 8.9</span>
+            <span class="dot">•</span>
+            <span class="badge">12+</span>
+          </div>
+          <p class="hero-desc">
+            Após a destruição causada por Thanos, os heróis restantes precisam se unir em uma missão desesperadora para restaurar o universo.
+          </p>
+          <div class="hero-btns">
+            <a href="https://www.disney.com.br/filmes/vingadores-ultimato" class="btn-play" target="_blank">
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+              Assistir
+            </a>
+            <a href="#" class="btn-trailer" target="_blank">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5,3 19,12 5,21"/></svg>
+              Trailer
+            </a>
+            <button class="btn-info" onclick="openDetailsModal(1)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              Mais Informações
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-slide" data-bg="img/AForja.png" data-trailer="https://www.youtube.com/embed/GZH97r36EhY?autoplay=1&rel=0">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <div class="hero-tag">🌟 EXCLUSIVO NOXFLIX</div>
+          <h1 class="hero-title">A FORJA</h1>
+          <div class="hero-meta">
+            <span>2024</span>
+            <span class="dot">•</span>
+            <span>2h 03min</span>
+            <span class="dot">•</span>
+            <span class="rating">★ 8.3</span>
+            <span class="dot">•</span>
+            <span class="badge">14+</span>
+          </div>
+          <p class="hero-desc">
+            Um jovem perdido e sem direção recebe a oportunidade de transformar sua vida através de disciplina, propósito e fé.
+          </p>
+          <div class="hero-btns">
+            <a href="https://www.justwatch.com/br/filme/the-forge" class="btn-play" target="_blank">
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+              Assistir
+            </a>
+            <a href="#" class="btn-trailer" target="_blank">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5,3 19,12 5,21"/></svg>
+              Trailer
+            </a>
+            <button class="btn-info" onclick="openDetailsModal(2)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              Mais Informações
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="hero-indicators" id="heroIndicators">
+      <button class="indicator active" data-index="0"></button>
+      <button class="indicator" data-index="1"></button>
+      <button class="indicator" data-index="2"></button>
+    </div>
+
+    <button class="hero-arrow prev" id="heroPrev">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15,18 9,12 15,6"/></svg>
+    </button>
+    <button class="hero-arrow next" id="heroNext">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9,18 15,12 9,6"/></svg>
+    </button>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CONTEÚDO PRINCIPAL — CARROSSÉIS
+  ═══════════════════════════════════════════ -->
+  <main class="main-content">
+    <section class="row-section">
+      <div class="row-header">
+        <h2 class="row-title"><span class="accent">|</span> Em Alta</h2>
+        <a href="#" class="row-see-all">Ver tudo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9,18 15,12 9,6"/></svg></a>
+      </div>
+      <div class="row-wrapper">
+        <button class="row-arrow left" onclick="scrollRow(this, -1)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15,18 9,12 15,6"/></svg>
+        </button>
+        <div class="cards-row" id="row-trending"></div>
+        <button class="row-arrow right" onclick="scrollRow(this, 1)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9,18 15,12 9,6"/></svg>
+        </button>
+      </div>
+    </section>
+
+    <section class="row-section">
+      <div class="row-header">
+        <h2 class="row-title"><span class="accent">|</span> Terror</h2>
+        <a href="#" class="row-see-all">Ver tudo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9,18 15,12 9,6"/></svg></a>
+      </div>
+      <div class="row-wrapper">
+        <button class="row-arrow left" onclick="scrollRow(this, -1)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15,18 9,12 15,6"/></svg>
+        </button>
+        <div class="cards-row" id="row-horror"></div>
+        <button class="row-arrow right" onclick="scrollRow(this, 1)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9,18 15,12 9,6"/></svg>
+        </button>
+      </div>
+    </section>
+
+    <section class="row-section">
+      <div class="row-header">
+        <h2 class="row-title"><span class="accent">|</span> Anime</h2>
+        <a href="#" class="row-see-all">Ver tudo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9,18 15,12 9,6"/></svg></a>
+      </div>
+      <div class="row-wrapper">
+        <button class="row-arrow left" onclick="scrollRow(this, -1)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15,18 9,12 15,6"/></svg>
+        </button>
+        <div class="cards-row" id="row-anime"></div>
+        <button class="row-arrow right" onclick="scrollRow(this, 1)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9,18 15,12 9,6"/></svg>
+        </button>
+      </div>
+    </section>
+
+    <section class="row-section">
+      <div class="row-header">
+        <h2 class="row-title"><span class="accent">|</span> Ficção Científica</h2>
+        <a href="#" class="row-see-all">Ver tudo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9,18 15,12 9,6"/></svg></a>
+      </div>
+      <div class="row-wrapper">
+        <button class="row-arrow left" onclick="scrollRow(this, -1)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15,18 9,12 15,6"/></svg>
+        </button>
+        <div class="cards-row" id="row-scifi"></div>
+        <button class="row-arrow right" onclick="scrollRow(this, 1)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9,18 15,12 9,6"/></svg>
+        </button>
+      </div>
+    </section>
+
+    <section class="row-section">
+      <div class="row-header">
+        <h2 class="row-title"><span class="accent">|</span> Lançamentos</h2>
+        <a href="#" class="row-see-all">Ver tudo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9,18 15,12 9,6"/></svg></a>
+      </div>
+      <div class="row-wrapper">
+        <button class="row-arrow left" onclick="scrollRow(this, -1)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15,18 9,12 15,6"/></svg>
+        </button>
+        <div class="cards-row" id="row-new"></div>
+        <button class="row-arrow right" onclick="scrollRow(this, 1)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9,18 15,12 9,6"/></svg>
+        </button>
+      </div>
+    </section>
+
+    <section class="row-section">
+      <div class="row-header">
+        <h2 class="row-title"><span class="accent">|</span> Clássicos</h2>
+        <a href="#" class="row-see-all">Ver tudo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9,18 15,12 9,6"/></svg></a>
+      </div>
+      <div class="row-wrapper">
+        <button class="row-arrow left" onclick="scrollRow(this, -1)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15,18 9,12 15,6"/></svg>
+        </button>
+        <div class="cards-row" id="row-classics"></div>
+        <button class="row-arrow right" onclick="scrollRow(this, 1)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9,18 15,12 9,6"/></svg>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══════════════════════════════════════════
+       MODAL DO TRAILER
+  ═══════════════════════════════════════════ -->
+  <div class="modal-overlay" id="trailerModal">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div class="modal-video-wrapper">
+        <iframe id="trailerIframe" src="" frameborder="0" allowfullscreen
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       MODAL DE DETALHES
+  ═══════════════════════════════════════════ -->
+  <div class="modal-overlay" id="detailsModal">
+    <div class="modal-content details-modal-content">
+      <button class="modal-close" id="detailsModalClose">✕</button>
+      <div class="details-body" id="detailsBody">
+        <!-- Preenchido dinamicamente pelo JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-top">
+      <a href="#" class="footer-logo">NOX<span>FLIX</span></a>
+      <div class="footer-links">
+        <a href="#">Sobre</a>
+        <a href="#">Contato</a>
+        <a href="#">Privacidade</a>
+        <a href="#">Termos</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 NOXFLIX. Plataforma fictícia de streaming.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
